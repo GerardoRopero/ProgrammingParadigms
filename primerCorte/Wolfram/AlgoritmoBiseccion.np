@@ -1,0 +1,21 @@
+AlgoritmoBiseccion[f_, a_, b_, tol_] := Module[{c, fa, fb, fc}, 
+  fa = f[a]; 
+  fb = f[b]; 
+  If[fa fb > 0, Return["Intervalo incorrecto"]]; 
+
+  While[Abs[b - a] > tol, 
+    c = (a + b)/2; 
+    fc = f[c]; 
+    
+    If[fc == 0, Return[c]]; 
+
+    If[fa fc < 0, 
+      b = c; fb = fc, 
+      a = c; fa = fc
+    ]; 
+  ]; 
+
+  Return[(a + b)/2]
+]
+
+AlgoritmoBiseccion[#^3 - 4 &, 1, 2, 0.001]
