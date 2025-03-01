@@ -1,0 +1,2 @@
+EsPrimo[a_] := Length[Divisors[a]] == 2
+EsPrimo[5]
