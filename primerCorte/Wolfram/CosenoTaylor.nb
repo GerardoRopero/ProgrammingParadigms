@@ -1,0 +1,2 @@
+CosenoTaylor[x_, N_] := Sum[(-1)^n * x^(2 n) / Factorial[2 n], {n, 0, N}]
+CosenoTaylor[45 * PI / 180, 5]

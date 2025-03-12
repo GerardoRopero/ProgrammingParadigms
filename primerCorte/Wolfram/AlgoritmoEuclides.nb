@@ -1,0 +1,2 @@
+AlgoritmoEuclides[a_, b_] := If[b == 0, a, AlgoritmoEuclides[b, Mod[a, b]]]
+AlgoritmoEuclides[48, 18]
